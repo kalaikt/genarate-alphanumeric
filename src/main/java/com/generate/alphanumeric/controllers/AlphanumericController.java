@@ -18,7 +18,7 @@ public class AlphanumericController {
    * @return Response object
    */
   @GetMapping(value = "/{phoneNumber}/{pageNumber}")
-  public @ResponseBody Response getAlpha(
+  public @ResponseBody Response getAlphanumerics(
       @PathVariable String phoneNumber, @PathVariable Integer pageNumber) {
     Response response = new Response();
     GenerateText generateText = new GenerateText(phoneNumber, pageNumber, RECORDS_PER_PAGE);

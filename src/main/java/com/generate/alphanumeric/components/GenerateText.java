@@ -80,6 +80,8 @@ public class GenerateText {
    * @return Integer
    */
   public Integer getStartIndex() {
+    if (recordsPerPage < getCount()) return 0;
+
     return (recordsPerPage * pageNumber) - recordsPerPage;
   }
 
@@ -89,6 +91,9 @@ public class GenerateText {
    * @return Integer
    */
   public Integer getEndIndex() {
+    Integer count = getCount();
+    if (recordsPerPage > count) return count;
+
     return recordsPerPage * pageNumber;
   }
 
