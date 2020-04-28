@@ -19,4 +19,4 @@ Combinations list by page
     count: total count,
     data: list of alphanumeric combinations per page,
     error?: error message
-} ```
+}
