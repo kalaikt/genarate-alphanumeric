@@ -15,8 +15,11 @@ Combinations list by page
 
 * 200 OK on success
 
-``` {
+```
+{
     count: total count,
     data: list of alphanumeric combinations per page,
     error?: error message
 }
+
+```
