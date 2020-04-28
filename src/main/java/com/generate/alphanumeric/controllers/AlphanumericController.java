@@ -13,15 +13,15 @@ public class AlphanumericController {
   /**
    * This method will read the request and send generated alphanumeric list
    *
-   * @param number telephone number
+   * @param phoneNumber telephone number
    * @param pageNumber page number
    * @return Response object
    */
-  @GetMapping(value = "/{number}/{pageNumber}")
+  @GetMapping(value = "/{phoneNumber}/{pageNumber}")
   public @ResponseBody Response getAlpha(
-      @PathVariable String number, @PathVariable Integer pageNumber) {
+      @PathVariable String phoneNumber, @PathVariable Integer pageNumber) {
     Response response = new Response();
-    GenerateText generateText = new GenerateText(number, pageNumber, RECORDS_PER_PAGE);
+    GenerateText generateText = new GenerateText(phoneNumber, pageNumber, RECORDS_PER_PAGE);
 
     response.setData(generateText.getCombinationsByPage());
     response.setCount(generateText.getCount());

@@ -8,7 +8,7 @@ Combinations list by page
 
 #### Definition
 
-`GET /generate/alphanumeric/{telephoneNumber}/{pageNumber}`
+`GET /generate/alphanumeric/{phoneNumber}/{pageNumber}`
 
 
 #### Response
